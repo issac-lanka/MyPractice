@@ -1,0 +1,2962 @@
+		JAVA
+		--------
+History of Java   
+--------------------
+	It is a product from a company called "Sun Microsystems". Invented way back in the year 1991 and the original name of Java was "OAK". Later in the year 1995 it was renamed to "JAVA". The credit of designing Java is not a single person's effort, but a team work comprising of 
+JAMES GOSLING (Father of Java), 
+PATRICK NAUGHTON, 
+MIKE SHERIDAN, 
+ED FRANK, 
+CHRIS WARTH, 
+BILL JOY etc.
+Features of Java
+---------------------
+1) Simple
+  Java is a simple language to learn and understand. Most of the rules and regulations come from the language C and the Object Oriented Principles come from the language C++. People who have minimal awareness to these languages can easily work out with Java.
+
+2) Object Oriented
+ Java is totally an Object Oriented Programming Language. It supports all the major principles of OOPS such as encapsulation, inheritance, polymorphism and abstraction.
+
+3) Robust
+       Java is strong enough to handle any kind of situation. Java's robustness can be seen in two major regions 
+	i) Memory Management
+	ii) Error Handling
+Memory Management
+-----------------------------
+If you take languages like C and C++, memory management has to be performed by the user himself. A programmer has to decide when to allocate and when to deallocate memory. In Java you need not bother about memory management. Java takes care of it for you. It decides when to deallocate memory.
+	Java uses a mechanism called "Garbage Collection" to deallocate the unreferred memory blocks.
+
+
+
+Error Handling
+---------------------
+ Basically an error is some sort of mistake committed by you in a program. Errors are generally classified into the following two groups.
+a) Compile Time Errors
+ These are the errors generated during the compilation of the program. They mostly occur due to wrong syntaxes. Easier to rectify, all we need to know is the right syntax.
+b) Run Time Errors
+ These are the errors generated during the execution of the program. They mostly occur due to wrong logics. Not easy to identify and to rectify. They often lead to 'ABNORMAL PROGRAM TERMINATION'.
+	Procedure Oriented programming languages such as Cobol, Pascal, Fortran and C do not give us an efficient way to tackle run-time errors. Java gives you the advanced mechanism of handling run-time errors through "Exception Handling", where exception is an alternate name for an error.
+
+ 
+4) Multi-threaded
+  Java gives you the provision for designing multi-threaded programs. A thread can be defined as a 'Block of Code'. You can design programs in such a way that two or more blocks of codes within the same program execute concurrently.
+
+
+5) Architecture Neutral & Platform Independent
+  The problem with C and C++ executables is that they are mostly targeted to the 'Intel' Processor. If you try to execute the executables on some other processors they fail. People wanted to design a software whose programs should run on any kind of processor having any kind of operating system. The result was the birth of Java. Hence the popular slogan goes - 
+	"Write once, run it anywhere".
+
+6) Distributed
+   With Java you can design powerful network based applications, such as creation of web-sites, web-portals, search engines, web-servers, chatting applications etc.
+
+		CORE JAVA
+		-----------------
+In Core Java you can build two types of programs.
+	1) Application programs
+	2) Applet programs
+
+APPLICATION PROGRAMS
+-------------------------------------
+	Application programs are the programs similar to those in C and C++. These are also referred as 'Console Based Applications', because they are compiled and executed at the MS-DOS prompt.
+JDK
+------
+	In order to write Java programs in your system, you must first install the software JDK (Java Development Kit). Different versions of JDK are available in the market, the latest being JDK1.8. Free downloads can be obtained from the site "www.oracle.com"
+
+Editors
+---------
+	The following are some of the editors which can be used for writing Java programs.
+1) Symantec Cafe
+2) Visual Cafe
+3) Edit Plus
+4) Eclipse
+5) Blue J
+6) Notepad
+7)NetBeans
+8)VI -editor(Unix)
+9)Emacs -editor(Unix).
+10)Dos-editor(Windows)
+
+
+Java's Magic ByteCode
+-----------------------------
+	When you compile a C/C++ source code, we get a direct executable (.exe). This executable is targeted mostly to the Intel processor. When you compile a Java source code (.java), we do not get a direct executable. Instead it creates an intermediate file called BYTECODE (.class). This bytecode can be run on any system provided the system is JVM (Java Virtual Machine) enabled.  JVM is a layer of software designed by Sun Microsystems. The purpose of JVM is to read instructions from the bytecode and converts it to the native code understood by the processor. 
+
+
+
+Structure of java program:
+===================
+Documentation Section
+Package statements
+import section
+interface section
+class definition section
+main class
+
+
+Structure of an application program
+--------------------------------------------
+syntax:
+--------------------
+class class_name
+{
+ public static void main(String args[ ])
+ {
+	. . .
+	Body of the main method
+	. . .
+  }
+}
+	
+class
+------
+ A reserved keyword with which we create classes.(allows us to define the user define data type)
+class_name
+--------------
+ A name given to the class.
+main method
+----------------
+ This is the location from where the program execution begins and terminates. 
+Note:
+===
+Functions in Java will be called as "Methods". 
+public:
+====
+"public"  a keyword which allows us to access the main program from outside the class.
+static:
+====
+static is also a keyword and is used to access the main method without using the object reference.
+
+
+Writing and Executing a Java program
+------------------------------------------------
+1) Write the source code and save it with the name of the "class" and the extension ".java".
+2) Switch to the MS-DOS prompt and then to the folder where you saved the file.
+3) Compile the source code using the compiler "javac.exe".
+Syntax
+---------
+	javac  filename.java
+4) Execute the bytecode using the interpreter "java.exe".
+Syntax
+---------
+	java bytecode
+
+process to open DOS:
+===============
+i)press window key+R  (opens run dialog)
+ii)type CMD and then press enter key (this opens the command prompt window)
+iii)type cd\ and press enter
+iv)type cd <path_to the folder_where program is located> and press enter
+eg:
+==
+	cd  java12
+v)prompt looks like
+c:\java12>
+
+Output statements
+-----------------------
+Allows us to print the text messages (or) values of the variables on the output.
+
+i)System.out.print()
+==============
+Prints the given text message or value of the variable on the output ,after printing the cursor won't moves to the next line.
+syntax:
+=====
+System.out.print("Message"+variable);
+ii)System.out.println()
+================
+Prints the given text message or value of the variable on the output, after printing the cursor  moves to the next line initial position.
+Syntax
+---------
+System.out.println("Message"+variable);
+
+iii)System.out.printf():
+===============
+Similar to printf in "C".
+syntax:
+=====
+System.out.printf("Control string",var1 ,var2,..);
+control string part of printf contains:
+====================
+i)User defined text messges
+ii)Format specifiers
+%d,%f,%c,%s,.........
+iii)Execution characters(or)Escape sequences
+\n, \t, \r, \b, \a, \', \", \\
+iv)System.out.format():
+==============
+This one also used to print the formated output on the screen
+syntax:
+=====
+System.out.format("control_string",var1,var2,..);
+control string part contains:
+======================
+i)format specifiers
+%d 	   for decimal integer. 
+%f	   for float. 
+%s	   for string
+%n  	 for new line character appropriate to the platform running the 		application. You should always use %n, rather than \n. 
+%%	To print the percentage sign on the output
+
+
+
+
+
+
+
+
+		VARIABLES
+		-----------------
+	A variable can be defined as a storage space in the systems memory, where you can store some kind of value. Variables can be declared in the following format.
+Syntax
+--------
+	data_type  var_name;
+
+Data type			range			size	format specifier
+==========		========		======	              ======
+int		-2147483648 to 2147483647		4b		  %d
+float		3.4E-38 to 3.4 E+38			4b		   %f
+long		-9223372036854775808  to		8b		   %d
+		  9223372036854775807	
+double		1.7E -308 to 1.7E +308		8b		   %f
+short		   -32768  to 32767			2b		   %d
+byte		  -128 to   127			1byte		   %d
+boolean		true  or false			1byte		   %b
+char		0 to 65535 chars			2bytes		   %c
+ 	          	(UNI  Code characters)
+String	     	Upto 2 billion characters	initially space for 16chars	   %s
+					and keeps on expanding
+ 
+
+Comments:
+========
+Java supports 2 types of comments
+i)Single line comment
+syntax:
+====
+	//text_message
+ii)Multi line comment
+syntax:
+=====
+	/*.............
+	message (or) part of the code
+	..............*/
+comments are used to place the text messages in the program. (ie) for documentaion. If we are placing any text messages or part of the code inside the comment then the compiler ignores the comments from the compilation process.
+
+		OPERATORS
+		-------------------
+	An operator is an entity which performs some kind of operation. Java supports the following operators.
+I. Arithmetic Operators
+	+, -, *, /, %
+II. Relational Operators
+	>, <, >=, <=, !=,==
+III. Logical Operators
+	&&, | |, !
+IV. Assignment Operator
+	=
+V. Increment Operator
+	++
+VI. Decrement Operator
+	- -
+VII. Updating Assignment Operators
+	+=, -=, *=, /=, %=
+	x=10;
+	x=x+5; or x+=5;
+VIII. String concatenation operator
+	+
+ (Used for concatenation).
+Eg :
+i) "Hello"+"World"	-	"HelloWorld"
+ii) "Hello"+10	-	"Hello10"
+IX)Bitwise operators
+================
+	>>	Right Shift operator
+	<<	Left Shift operator
+	~	Complement opeator
+	^	XOR operator
+	|	Bitwise OR
+	&	Bitwise AND
+	
+
+
+
+
+
+	CONTROL STRUCTURES
+	------------------------------------
+	Control structures are used to control the flow of your program. Java provides the following control structures.
+I. if statement
+------------------
+Checks for logical conditions in your program.
+Syntax (i)
+-------------
+if (condition)
+{
+ statement;
+}
+statement-x
+
+
+else if:
+============
+Syntax (ii)
+-------------
+if (condition)
+{
+ statement;
+}
+else
+{
+ statement;
+}
+statement-x;
+
+
+Ladder if:
+=======
+Syntax (iii)
+--------------
+if (condition)
+{
+ statements;
+}
+else if (condition)
+{
+ statements;
+}
+else
+{
+statement;
+ . . .
+}
+statement-x;
+
+nested if:
+=======
+syntax:
+======
+if(condition)
+{
+ if(condition)
+  statements;
+ else
+   statements;
+}
+else
+{
+............
+}
+statement-x;
+
+II. switch statement
+--------------------------
+	Tests a variable's value with a list of constants defined by us for equality. Where an appropriate match is found, the corresponding block of statements are executed and the structure is terminated.
+Syntax
+--------
+switch(expression|variable)
+{
+case constant-1 : 
+	statements;
+	break;
+case constant-2 : 
+	statements;
+	break;
+	. . .
+[ default : 
+	statements;] 
+}
+statement-x;
+
+
+III. Loops
+-------------
+	A loop can be defined as a repeated execution of a statement or a block of statements.
+	i) while
+	ii) for
+	iii) do...while
+A) while loop (Entry Controlled Looping structure)
+Syntax
+---------
+while(condition)
+{
+statements;
+}
+statement-x;
+
+c) do .. while loop (Exit Controlled Looping structure)
+Syntax
+---------
+do{
+statements;
+}while(condition);
+statement-x;
+
+
+
+b) for loop:
+========
+Syntax
+---------
+for(initialization ; condition ; expression)
+{
+	statements;
+}
+statement-x;
+
+
+
+
+nested loops:
+==========
+Placing one more loops inside another loop is known as nesting of loops.
+syntax:
+=====
+for(initialization;condition;expression)
+{
+ for(initialization;condition;expression)
+{
+..........
+ }
+}
+
+
+Eg : For.java
+
+break statement
+----------------
+    Allows you to terminate a looping structure.(ie)breaks the innermost block explicitly.
+Syntax
+---------
+	break;
+
+
+
+
+ continue statement
+============
+	Skips the current process and proceeds for the next iteration.
+Syntax
+---------
+	continue;
+
+
+label:
+====
+label is a statement that terminates with a colon and is used to identify the part of the program with a name.
+syntax:
+=====
+	label:
+break with label:
+============
+By using label we can break the process upto the specified label.
+syntax:
+=====
+	break  label;
+
+continue with label:
+=============
+By using the continue with label, we can skip the current process then proceeds for the next iteration from the specified label .
+syntax:
+=====
+	continue  label;
+
+
+
+
+
+		ARRAYS
+		-------------
+	An array can be defined as a collection of similar type of elements. Java supports the creation of four kinds of arrays namely
+	1) Single Dimensional
+	2) Double Dimensional
+	3) Multi Dimensional
+	4)Jagged Array
+1) Single Dimensional Arrays
+--------------------------------------
+A single dimensional array is created in the following format.
+Syntax
+---------
+i) data_type array_name[ ]=new data_type[size];
+ii) data_type array_name[ ];
+    array_name=new data_type[size];
+Eg :
+i) int x[]=new int[5];
+ii) int x[];
+    x=new int[5];
+
+length property
+--------------------
+	Whenever you create an array in Java, it associates a special property for the array called the 'length' property. This property returns the size of the array.
+Usage :
+----------
+	array_name . length
+
+
+anonymous array:
+============
+Array dymanic creation with initial values is known as anonymous array.
+Mainly this type of array is used to send the array with values as argument to a function.
+syntax:
+=====
+new data_type []{values,..};
+eg:
+==
+new int[]{10,20,30,40};
+for each (Enhanced for loop):
+=====================
+This loop is used to extract values from the array and places the values into the variable.
+Loop increments by one and this iteration process continues until the size of the array.
+syntax:
+=====
+for (data_type variable : array_name)
+{
+........
+}
+eg:
+==
+for(int x:a)
+{
+ System.out.print(x+"\t");
+}
+2) Double Dimensional Arrays
+---------------------------------------
+	A 2-D array is a matrix of rows and columns. It is created in the following format.
+Syntax
+---------
+i)data_type arrayname[][]=new data_type[rows][cols];
+ii) data_type arrayname[][];
+     array_name=new data_type[rows][cols];
+Eg :
+i) int x[][]=new int[3][3];
+ii) int x[][];
+    x=new int[3][3];
+
+
+Eg :
+Write a program to print the following matrix.
+	1	0	0
+	0	1	0
+	0	0	1
+Eg : IdentityMatrix.java
+Exercises
+------------
+Write Java programs to print the following matrices.
+1)	1	1	1
+	1	1	1
+	1	1	1
+
+2)	1	0	1
+	0	1	0
+	1	0	1
+
+3)	1	2	3
+	4	5	6
+	7	8	9
+
+4)1	1	1	1	1
+    1	0	0	0	1
+    1	0	2	0	1
+    1	0	0	0	1
+    1	1	1	1	1
+
+5) 1	2	3	4	5
+    10	9	8	7	6
+    11	12	13	14	15
+    20	19	18	17	16
+    21	22	23	24	25
+
+6) Transpose a matrix.
+7) Perform matrix addition.
+8) Perform matrix multiplication.
+	
+	In Java you can create a variety of a 2-D array, with each row having varying number of cells.
+Eg : DoubleDim.java
+
+3) Multi-Dimensional Arrays
+-------------------------------------
+	Multi-dimensional arrays are created in the following format.
+Syntax
+---------
+data_type array_name[][][]...=new data_type[][][]...;
+4)Jagged Array:
+=============
+Array each row with different columns (ie) each row with different sizes is known as jagged array.
+eg:
+==
+int  a[][]=new int[3][];
+a[0]=new int[5];
+a[1]=new int[3];
+a[2]=new int[4];
+
+
+
+		OOPS
+		--------
+	OOPS is expanded as Object Oriented Programming Structures. OOPS allows you to decompose larger programs into what are known as OBJECTS. An OBJECT consists of a set of DATA and CODE (Functions/Methods) bound together into a single unit.
+
+
+OOPS Principles
+----------------------
+	In order to refer to a language as OOPS, it must satisfy the following principles.
+1)Object
+2)Class
+3)Data Abstraction
+4)Data Encapsulation
+5) Inheritance
+6) Polymorphism
+7)Dynamic binding
+8)Message passing
+
+object:
+=====
+an object is a partitioned memory area which contains both the data members and member functions.
+	An object may represent the physical entities like person, employee, book, student etc...
+class:
+=====
+class is a keyword and is used to define the user define data type.  (ie) class is used to define the object.
+	Class can also be define as collection of similar type of objects.
+Data Abstraction
+---------------
+	The act of representing essential details without including the background / internal unwanted, unnecessary details.
+Data Encapsulation
+------------------
+	The process of binding DATA and CODE into a single unit is referred as 'Encapsulation'. Encapsulation is the most striking feature of OOPS, since it gives you the idea of DATA-HIDING. DATA is hidden and is inaccessible to the outside world. It is tied more closely to a set of CODE which can operate on the DATA. The DATA is commonly referred as INSTANCE VARIABLES and the CODE is commonly referred as MEMBER METHODS.
+Inheritance
+---------------
+	Inheritance is the mechanism of acquiring the properties (data/code) into another. This concept gives us the idea of REUSABILITY.
+Polymorphism
+------------------
+	The ability to exist in more than one form or state is referred as 'Polymorphism'.
+
+
+
+
+
+
+
+		CLASSES
+		-------------
+	A class provides the basis for DATA-ENCAPSULATION. With the help of a class you can bind DATA and CODE into a single unit. 
+Syntax
+---------
+class  class_name
+{
+visiblity data_type var1;
+visibility data_type var2;
+       . . .
+visbility return_type method1([args])
+{
+	. . .
+}
+visibility return_type method2([args])
+{
+	. . .
+}
+. . .
+}
+Options
+-----------
+i) class
+ A reserved keyword with which we create classes.
+ii) class_name
+ Specifies a name given to the class.
+iii)visibility:
+=========
+public, private,protected these 3 keywords are known as visibility labels (or) access specifiers (or) visibility qualifiers.
+public:
+=====
+these members are accessible from outside the object, by using the object reference along with dot operator.
+private:
+=====
+These members are not accessible from outside the object, only other members of the object can access.
+	private members can access through public members of the same object
+protected:
+======
+similar to public, but the difference comes in inheritance.
+iii) var1, var2, ...
+ Specifies a list of instance variables.
+iv) method1, method2, ...
+ Specifies a set of code which can operate on the instance variables.
+Eg :
+==
+class Box
+{
+private double l,b,h;
+public void input()
+{
+.........
+}
+public void find_volume()
+{
+.........
+}
+}
+
+Creating OBJECTS
+--------------------------
+	An object can be defined as a variable of the type "class". Some people refer to objects as INSTANCES OF A CLASS. Objects are created in the following format.
+Syntax
+---------
+class_name  object_name=new  class_name();
+			|
+		Default Constructor
+Eg :
+Box  B=new Box();
+
+Accessing instance members of an object
+---------------------------------------------------
+	In order to access the public/protected instance members  of an object we must use the operator called DOT (.).
+Syntax
+---------
+object_name . instance_member_function();
+Eg :
+==
+b.input();
+b.findvolume();
+Eg :
+
+ InstanceVariables.java
+	Fig 2.
+		METHODS
+		---------------
+	Methods are a set of code which can operate on the data. They are designed in the following format.
+Syntax
+---------
+return_type  method_name([arguments]){
+[ Local variables; ]
+. . .
+Body of the method
+. . .
+[ return expression;]
+}
+Options
+----------
+i) return_type
+  Specifies the type of value returned by the method. For eg. if a method returns an integer value, you can specify the return_type as "int". Sometimes methods do not return any value. In such a case you can specify the return_type as "void", which means nothing.
+ii) method_name
+  Specifies a name for the method.
+iii) arguments
+  Specifies a list of variables received or send to the method.
+iv) local variables
+  Specifies a list of variables which will be local to that method.
+v) return expression
+  This clause is used when a method returns a value. 'expression' can be a variable name or a mathematical equation.
+Eg :
+a) return z;
+b) return a+b;
+
+Function contains 2 parts:
+==================
+i)calling function:
+===============
+The statement that makes a call to the code is known as calling function.
+Arguments with calling function are known as actual arguments.  Actual arguments are used to send the values to the called function.
+ii)Called function:
+=============
+the code that responds to the call of the calling function is known as called function.  Arguments with the called function are known as formal arguments (or) formal parameters.  Formal arguments are used to receive the values from the actual arguments.
+
+Accessing methods
+-----------------------
+Methods can be accessed in the following format.
+Syntax
+---------
+object_name.method_name();
+
+II. Methods with return-types and with arguments
+--------------------------------------------------------
+III. Methods without returning value and with arguments
+------------------------------------
+Iv. Methods with  returntype without  arguments 
+------------------------------------
+	Eg : Meth3.java (Fig 2)
+ Nesting of member methods
+----------------------------------------
+	You can invoke one method from inside another method in the same class. This is commonly referred as 'Nesting of member methods'.
+	
+
+
+ Overloading methods
+-------------------------------
+	A class can contain any number of methods with the same name, but change in either the number of arguments or type of arugments.  This is commonly referred as 'Overloading Methods'. It exhibits the concept of 'Polymorphism'.
+
+
+nested methods:
+============
+Calling one more methods from another method is known as nesting of methods.
+
+
+	
+
+
+
+ Methods taking OBJECTS as arguments
+------------------------------------------------------
+	Sometimes methods are designed with objects as arguments. In such a case prefix the formal parameter with the name of the class.
+Method returning object:
+================
+As we are returning the primitive values, we can also return the object.  When we return the object then the return type must be the class name.
+	
+
+
+
+
+1/10
+------
+	ACCESS   SPECIFIERS
+	--------------------------------
+	'private' and 'public' are called the Access Specifiers in Java.
+Private members
+----------------------
+	The members declared as 'private' cannot be accessed from outside the class. You can access them only through the 'public' methods of the class.
+Public members
+---------------------
+	The members declared as 'public' can be accessed from outside the class, using objects. By default all the members of the class are 'public'.
+	Eg : AccessSpec.java
+
+
+
+
+	CONSTRUCTORS
+	-------------------------
+	A constructor is a member method, whose task is to initialize the instance variables of a class with some initial values  by constructing the object.
+Rules for designing constructors
+------------------------------------------
+1) Constructor is a public member function that shares the name of the class.
+2) They never return any kind of value, so no need to specify return type. (not even void)
+3) Constructors are automatically invoked at the time of an object.
+4) Constructor can be parameterized.
+5)Constructor never inherits
+6)Constructor never be static
+7)Constructor can be overloaded.
+	Constructors can be designed in two different models.
+1) Constructors without arguments.
+2) Constructors with arguments.
+Constructors without arguments
+------------------------------------------
+Syntax
+---------
+class class_name
+{
+. . .
+public class_name()
+{
+. . . // A constructor
+}
+. . .
+}
+	Constructors with arguments
+	--------------------------------------
+	The problem with the above constructor is that - any number of objects you create, are initialized with the same set of values. To initialize different objects with different sets of values, we can design parameterized constructors (i.e.) constructors with arguments. 
+Syntax
+---------
+class class_name
+{
+. . .
+public class_name(arguments)
+{
+. . . // A parameterized constructor.
+}
+. . .
+}
+
+Syntax for object creation when constructor contains arguments:
+=================================
+class_name  object=new class_name(arguments);
+
+
+this:
+===
+"this" is a keyword and is used to represent the current members of the object from where member method is invoked.
+syntax:
+====
+this.instance_data_member;
+
+	this keyword mainly used to represent the data members of the object, when the local variables of the method and the data members of the class are with the same name.
+
+"this" is also used to return the current object from where member method is invoked.(ie) return the object itself.
+syntax:
+=====
+return  this;
+
+	Overloading Constructors
+	----------------------------------
+	A class can have any number of constructors as long as their formats are different. This is commonly referred as 'Constructor Overloading'. It again exhibits the concept of polymorphism.
+
+
+
+ 
+
+
+
+static members of the class
+====================
+To declare the members as the class members use the keyword "static".  
+	"Static" members are the class members, where as non static members are object members.
+static data members:
+==============
+We can declare the variables (data members) as class members by using the keyword "static"
+syntax:
+=====
+static  data_type  variable_name;
+"static" data members are common for all the objects of that class and they are always with the class.
+
+No matter any number of objects are created for the class, all the objects has to access the same set of static members.
+
+pro49.java
+
+static member functions:
+=================
+As we declaring the static data members, we can also declare the static member functions.
+Static member functions can access other static members only.
+Non static members cannot access from static methods.
+syntax:
+=====
+visibility  static  return_type  function_name(args)
+{
+.........
+}
+Due to Static members are class members, we can access the static members directly with the reference of the class.
+syntax:
+=====
+class_name.static_member method();
+
+
+
+
+static block:
+==========
+syntax:
+=====
+static
+{
+.........
+}
+i)static block initiates at the time of program execution
+ii)static block executes only once
+iii)static block can access only the other static members of the class
+iv)static block invokes automatically at the time of program execution begins.
+
+
+
+
+
+
+
+
+ Math Class
+========
+Constants:
+=======
+i) static double E 
+Returns the exponential value.
+
+ii)static double PI 
+Returns the PI value.
+
+Methods:
+=======
+i)static  int  abs(int)
+	returns the absolute value for the given int values.  
+ii)static double  sqrt(double)
+	retruns the square root for the given double value
+iii)static  double  cbrt(double)
+	returns the cube root for the given double value
+iv)static  double  ceil(double)	
+	returns the least int value greater than or equal to given double value.
+
+v)static double floor(double)
+	returns the greatest int value less than or equal to the give double value.
+vi)static  double exp(double x)
+	returns the exponential value for the given value. (e to the power x value)
+vii)static double log(double)
+	returns the log base e value for the given double value
+
+viii)static  double  log10(double)	
+	returns the log base 10 value for the given double value
+ix)static double  max(double x,double y)	
+	returns the max value
+x)static  double  min(double x,double y)
+	returns the min value
+xi)static  double  pow(double b,double p)
+	returns the resultant value for the given base raised to the power
+xii)static  long  round(double )
+	rounds the given double value
+xii)static double  random()
+	returns the random value between 0 and 1
+
+static import:
+========
+As we are importing the class from the package, we can also import the static members of the class into the program by using static import.
+syntax:
+=====
+import   static  package.sub_package.class_name.static_member;
+(or)
+import  static  package.sub_package.class_name.*;
+
+eg:
+===
+i) import static java.lang.System.out;
+This example only imports the out member from the class "System" into the  program.
+ii)import   static  java.lang.Math.*;
+   This example imports all the static members from the class "Math" into the program.
+
+If we import the static members into the class, then we can access the static members directly without using the class reference.
+
+
+	INHERITANCE
+	---------------------
+	Sometimes you might want to use the members of one class into another.  You can make it possible using the concept of 'Inheritance'. Inheritance is the mechanism of acquiring the properties of one class into another.  The class whose properties you want to acquire is referred as 'SUPER CLASS' and the class that newly builds by acquiring properties is referred as the 'SUB CLASS'. Inheritance gives us the idea of reusability. 
+Types of inheritances
+---------------------------
+Java supports only three types of inheritances.
+1) Single Inheritance
+2) Multi-Level Inheritance
+3) Hierarchical Inheritance
+
+Creating a sub-class
+--------------------------
+A sub-class can be created in the following format.
+Syntax
+---------
+class sub_classname extends super_classname
+{
+	. . .
+	Body of the sub-class
+	. . .
+}
+	When you extend a super-class, all the public and protected members of the super class are inherited into the sub-class. Private members are not inherited.
+Protected Members
+-------------------------
+	The protected members are  similar to the public  members of the class. But the difference between the two comes in inheritance. 
+Private members are not inherited whereas Protected members are inherited into the classes of same package.  But public member inherits into the classes of any package.
+
+Once the super class inherits into the subclass, then all the public and protected members of the super class becomes the members of the subclass and we can access all these members with the reference of sub class object.
+	Single Inheritance
+	-----------------------
+In a single inheritance we just have two classes - namely a super class and a sub class.
+	Fig 2. 
+	Eg : SingleInh.java (Fig 3)
+
+	Multi-Level Inheritance
+	-------------------------------
+In a multi-level inheritance, we have a series of classes  created one from another. The root class is referred as the 'Super class' and all the subsequent classes are referred as the 'Sub classes'.
+
+	Hierarchical Inheritance
+	--------------------------------
+A hierarchical inheritance represents the shape of an inverted tree. We have the super class as the root class from which the sub-classes extend in the form of branches.
+
+
+
+Overriding:
+==========
+If the sub class contains a method with the same name as the inherited super class member method, then the object of the sub class gives the priority to the local member by ignoring the inherited super class member method.
+	The concept of ignoring the inherited member by giving the priority to its own member is known as overriding.
+note:
+====
+to access the override member, we use the keyword "super".
+syntax:
+=====
+	super.member_method();
+
+Dynamic binding (or)Late binding
+========================
+super class can hold the object (address) reference of the subclass, but sub class  cannot hold the object reference of the super class.
+	when ever super class object referes the subclass, then super class object only accesses the member of the super class.  If we are trying to access the subclass member methods with the super class reference variable, then they fails.
+	But, if the sub class contains the override methods then the super class reference object accessing the override members.  This concept is known as late binding or dynamic binding.
+note:
+====
+If the sub class contains override method, then the super class reference object can access the override member, else super class reference object can access its own method.
+	Linking the function call to its code at runtime is known as late binding or dynamic binding and it is the example of runtime polymorphism.
+
+
+Super class contains a constructor without arguments:
+=====================================
+If the super class contains a contructor without arguments, then there is no need to have the constructor in the sub class, the default constructor of the sub class takes the responsibility to fire the super class constructor.
+
+
+
+Super class contains a constructor with arguments:
+==================================
+If the super class contains a constructor with arguments, then it is mandatory to have the constructor in the sub class and sub class constructor takes the responsibility to pass the arguments to the super class constructor.
+	"super" is a keyword that is used to pass the arguments to the super class constructor.
+syntax:
+====
+super(arguments);
+note:
+====
+"super" statement must be the first statement in the subclass constructor.
+
+abstract class:
+=========
+Abstract class contains some of the methods with definitions and some of the methods without definitions. (ie) abstract class is an incomplete class.
+We cannot create the object for the abstract class.
+	We have to inherit the abstract class into other classes and has to design the body for the incomplete methods(abstract methods).
+	If a method contains only declaration without any definition, then we have to declare the method as abstract method and the class that contains the abstract methods must be declare as abstact class.
+syntax:
+====
+abstract class class_name
+{
+visibility return_type method_name(arg)
+{
+..........
+}
+abstract visibility return_type method_name(arg);
+}
+note:
+=====
+abstract class provides the concept of inheritance and overriding.
+
+Note:
+====
+Super class reference variable can refer the sub class object, but subclass reference variable cannot hold the super class object.
+	super class reference variable can access only the super class members, to access the sub class members with the super class reference variable, sub class must contain the methods similar to the super class members(ie) sub class must override the super class members
+syntax:
+=====
+super_class object=new sub_class_name();
+This concept is also known as late binding (or) dynamic binding.
+
+final:
+===
+"final"  is a keyword and is used to declare the identifiers as constants.
+syntax:
+======
+final data_type=value;
+
+eg:
+==
+final double PI=3.14;
+
+Once the data member is declared as final, then we cannot alter the value of the data member in the entire program.
+
+
+final method:
+==========
+final keyword is also used to  avoid the overriding of the super class member method in the sub class.
+syntax:
+=====
+final visibility  return_type  function_name()
+{
+.............
+}
+final class:
+======
+As we declaring the final method, we can also declare the final class.
+syntax:
+=====
+final class class_name
+{
+................
+}
+If we declaring the class as final, then we cannot inherit the class into another class.(ie) final class is ultimate class and never inherits
+
+	BUILT-IN PACKAGES
+	-------------------------------
+	A package is similar to a header file in C and C++. Packages contain a host of pre-defined classes. A package can be linked with your program using the statement called "import".
+Syntax
+---------
+import package_name.subpackage_name.*;
+
+Eg :
+i) import java.lang.*;
+ imports all the classes from the package 'java.lang'.
+ii) import java.lang.System;
+ imports just the class 'System' from the package 'java.lang'.
+
+Tips to write Java programs
+------------------------------------
+1) Built in class names are made up of two or more words, then first character of each word will be capitalized.
+2) Method (function) names are made up of two or more words. Then except the first word remaining words starting characters must be capitalized.
+
+
+packages	(similar to header file in c)
+subpackage
+classes
+functions	(methods)
+
+
+
+
+
+		java.lang
+		-----------
+I. String class
+------------------
+ Allows you to manipulate with strings.
+Constructors
+-----------------
+i) String();
+ Constructs an empty string object.
+ii) String(char buffer[ ]);
+ Constructs a String object using the contents of a single dimensional char array.
+iii) String(char buffer[ ], int start, int no of chars);
+ Constructs a String object using a range of contents from a single dimensional character array.
+iv) String(String s);
+ Constructs a String object using the contents of another String object.
+v)String(StringBuffer sb)
+constructs the string object by using the StringBuffer object.
+vi)String(byte[] bytes) 
+          Constructs a new String by decoding the specified array of bytes using the platform's default charset.
+vii)String(byte[] bytes, int offset, int length) 
+          Constructs a new String by decoding the specified subarray of bytes using the platform's default charset.
+
+
+
+Methods
+-----------
+1) int length();
+  Returns the length of the string.
+
+2) char  charAt(int index);
+  Returns the character at the specified index.
+
+3) void getChars(int start, int end, char target[ ], int targetStart);
+  Constructs a character array using a range of contents from the String object.
+
+
+
+4) char[ ] toCharArray();
+   Constructs a character array using the entire contents of a String object.
+
+
+5) boolean equals(String s);
+  Checks whether the two strings are equal or not. If equal returns 'true' else returns 'false'.
+
+6) boolean equalsIgnoreCase(String s);
+  Checks whether the two strings are equal or not, ignoring the case. If equal returns 'true' else returns 'false'.
+
+
+7) boolean regionMatches(int start, String s2, int s2start, int numchars);
+ 8) boolean regionMatches(boolean ignore, int start, String s2, int s2start, int numchars);
+	Compares a range of characters in one String object with a range of characters in another String object for equality. 
+
+
+9) boolean startsWith(String s);
+  Checks whether one string starts with another string.
+10) boolean endsWith(String s);
+  Checks whether one string ends with another string.
+
+
+11) int compareTo(String s);
+  Compares two strings for equality. If equal, returns the value 0.
+
+
+12) int indexOf(char x);
+  Returns the first occurrence of the character in the string.
+13) int lastIndexOf(char x);
+  Returns the last occurrence of the character in the string.
+
+
+14) String substring(int start);
+15) String substring(int start, int end);
+  Returns a sub-string from a string.
+
+
+16) String trim();
+  Removes leading and trailing blank spaces.
+
+17) String concat(String s);
+  Concatenates two strings.
+
+
+18) String toUpperCase();
+ Converts to upper case.
+19) String toLowerCase();
+  Converts to lower case.
+
+20) byte[ ] getBytes();
+  Converts a string to byte format.
+21)String[] split(String delimiter);
+  Splits the given string by using given delimiter.
+22)boolean contains(String s);
+	verifies for the string "s" in the main string.  If it contains, returns true, else return "false".
+
+
+
+II. StringBuffer class
+----------------------------
+	A superior class when compared to the String class. The StringBuffer class supports some major operations like appending contents, deleting contents, inserting contents etc. These operations are not supported by 'String' class.
+Constructors
+-----------------
+i) StringBuffer();
+ Constructs an object with the initial buffer capacity set to 16 characters. However this is not fixed. Once this is full, it keeps on expanding the buffer with 16 characters. 
+ii) StringBuffer(int size);
+ Constructs an object with the initial buffer capacity set to 'size'. Once that is full, it keeps on expanding the buffer by 16 characters.
+iii) StringBuffer(String s);
+ Constructs an object with the contents of a String object and reserves room for additional 16 characters.
+Methods
+-----------
+i) int length();
+ Returns the number of characters.
+ii) int capacity();
+ Returns the total allocated capacity.
+	
+iii) char charAt(int pos);
+iv) void getChars(int start, int end, char target[ ], int targetstart);
+
+v) StringBuffer append(int x);
+vi) StringBuffer append(String s);
+vii) StringBuffer append(Object ob);
+ Appends the contents of an 'int' variable, a String object or any other object into the StringBuffer object.
+
+
+viii) StringBuffer insert(int index, int x);
+ix) StringBuffer insert(int index, String s);
+x) StringBuffer insert(int index, Object ob);
+ Inserts the contents of an 'int' variable, a String object or any other object at the specified index.
+
+
+xi) StringBuffer delete(int start, int end);
+  Deletes a range of characters.
+	
+xii) StringBuffer deleteCharAt(int index);
+  Deletes the character at the specified index.
+
+xiii) StringBuffer reverse();
+  Reverses the contents of a StringBuffer object.
+
+StringTokenizer:
+===========
+The string tokenizer class allows an application to break a string into tokens.
+The set of delimiters (the characters that separate tokens) are used to split the string into individual tokens.
+The delimiters are (',' ';'  ':'  ' ') comma, semicolon,colon or space are used to split the string into tokens.  The default delimiter is "space".
+delimiter:
+=======
+Delimiter is a special symbol that is used either for termination (or) for separation.
+Constructors
+===========
+i)StringTokenizer(String str)
+Constructs a string tokenizer for the specified string.
+ii)StringTokenizer(String str, String delim)
+Constructs a string tokenizer for the specified string.
+iii)StringTokenizer(String str,String delim, boolean returnDelims)
+Constructs a string tokenizer for the specified string.
+Methods:
+======
+i)int  countTokens()
+Returns the number of tokens in the tokenizer object.
+ii)boolean 	hasMoreElements()
+Returns true if the tokenizer object contains tokens
+iii)Object 	nextElement()
+Returns the next available token from the tokenizer object in object format.
+iv)String 	nextToken()
+Returns the next token from this string tokenizer.
+v)String 	nextToken(String delim)
+Returns the next token in this string tokenizer's string.
+vi)boolean  hasMoreTokens()
+Tests if there are more tokens available from this tokenizer's string.
+
+4/10
+------
+	WRAPPER CLASSES
+	-----------------------------
+	java.lang provides us with a special set of classes known as 'Wrapper Classes'. These classes convert primitive data-types into Objects and vice-versa. Wrapper Classes in Java are used just for "Type Conversions" or "Type Casting". Type conversion means converting one type of value into another. Every primitive data-type has its corresponding wrapper class.
+
+I. Integer class
+-------------------
+A wrapper class around the data-type "int".
+Constructors
+-----------------
+i) Integer(int x);
+ Constructs an 'Integer' object using the contents of an 'int' variable.
+ii) Integer(String s);
+ Constructs an 'Integer' object using the contents of a 'String' object.
+	Eg : WrapperInteger.java
+Methods
+-----------
+i) byte  byteValue();
+ Converts to 'byte' data-type.
+ii) double  doubleValue();
+ Converts to 'double'.
+iii) float  floatValue();
+ Converts to 'float'.
+iv) int  intValue();
+ Converts to 'int'.
+v) long  longValue();
+ Converts to 'long'.
+vi) short shortValue();
+ Converts to 'short'.
+vii) String  toString();
+ Converts to 'String'.
+	Eg : WrapperIntMeth1.java
+viii) static String toBinaryString(int x);
+ Converts to binary format.
+ix) static String toHexString(int x);
+ Converts to hexa-decimal format.
+x) static String toOctalString(int x);
+ Converts to octal format.
+Note :
+--------
+	The 'static' methods of a class can be called directly with the name of the class. You need not create objects to call them.
+	Eg : WrapperIntMeth2.java
+xi) static int parseInt(String s);
+ Converts the contents of a 'String' object into an 'int' data-type.
+	Eg : WrapperIntMeth3.java
+
+II. Byte class
+-----------------
+ A wrapper class around the data-type 'byte'.
+Constructors
+-----------------
+i) Byte(byte x);
+ii) Byte(String s);
+Methods
+-----------
+Same as 'Integer' class (i) to (vii).
+
+III. Short class
+-------------------
+ A wrapper class around the data-type 'short'.
+Constructors
+-----------------
+i) Short(short s);
+ii) Short(String s);
+Methods
+-----------
+Same as 'Integer' class (i) to (x).
+
+IV. Long class
+------------------
+ A wrapper class around the data-type 'long'.
+Constructors
+-----------------
+i) Long(long l);
+ii) Long(String s);
+Methods
+-----------
+Same as 'Integer' class (i) to (x).
+(xi) static long parseLong(String s);
+ Converts the contents of a 'String' object into 'long' data-type.
+
+V. Float class
+-----------------
+ A wrapper class around the data-type 'float'.
+Constructors
+-----------------
+i) Float(float f);
+ii) Float(String s);
+Methods
+-----------
+Same as 'Integer' class (i) to (x).
+
+VI. Double class
+---------------------
+ A wrapper class around the data-type 'double'.
+Constructors
+-----------------
+i) Double(double d);
+ii) Double(String s);
+Methods
+-----------
+Same as 'Integer' class (i) to (x).
+
+VII. Character class
+--------------------------
+ A wrapper class around the data-type 'char'.
+Constructor
+----------------
+Character(char x);
+Methods
+------------
+i) static boolean isLetter(char x);
+ Checks whether the specified character is an alphabet or not.
+ii) static boolean isDigit(char x);
+ Checks whether the specified character is a digit or not.
+iii) static boolean isLetterOrDigit(char x);
+ Checks whether the specified character is a letter or a digit or not.
+iv) static boolean isUpperCase(char x);
+ Checks whether the specified character is an upper case alphabet or not.
+v) static boolean isLowerCase(char x);
+ Checks whether the specified character is a lower case alphabet or not.
+vi) static boolean isWhitespace(char x);
+ Checks whether the specified character is a blank space or not.
+vii) static char toUpperCase(char x);
+ Converts to upper case.
+viii) static char toLowerCase(char x);
+ Converts to lower case.
+Program
+------------
+	Initialize a String object with some contents. Write a Java program to count the number of upper case alphabets, lower case alphabets, digits, spaces,special symbols and vowels in the string.
+
+
+	Eg : WrapperCharacter.java
+	        WrapperCharacter1.java
+
+
+COMMAND LINE ARGUMENTS
+--------------------------------------------
+	Command line arguments are nothing but a list of values passed to the program, during the execution of the program. The values passed are received in the variable 'args', which itself is an array of 'String' objects. 'args' is created dynamically at run-time. The number of objects created depend on the number of values passed by you during the execution of the program. Each and every value is separated by a space.
+Execution
+--------------
+java  bytecode   val1 val2   valu3...............
+
+
+	EXCEPTION HANDLING
+	-----------------------------------
+	Basically there are two kinds of errors namely - Compile time errors and Run time errors.	Compile time errors are the errors generated during the compilation of the program. They are mostly generated due to wrong syntaxes. Easier to rectify, all we need to know is the right syntax. 
+	On the other hand Run time errors are the errors generated during the execution of the program. They mostly occur due to wrong logics. They often lead to 'ABNORMAL PROGRAM TERMINATION'.
+	Procedure Oriented Programming languages such as Cobol, Pascal, Fortran and C do not give you an efficient way to tackle run-time errors. Java gives you the advanced mechanism of handling run-time errors through "Exception Handling", where exception is an alternate name for an error. 
+	Exception handling can be performed in two ways.
+	1) Using try ... catch block
+	2) Using throws
+
+	TRY ... CATCH block
+	-----------------------------
+	Any block of code, which you feel would generate a run-time error can be simply placed in a 'try' block. A 'try' block must be accompanied by a 'catch' block. The 'catch' block takes one argument, which is an object of the type 'Exception'. 'Exception' is a pre-defined class available in the package 'java.lang'.
+Syntax
+---------
+try{
+	. . .
+	Block of code
+	. . .
+}
+catch(Exception ob)
+{
+	. . .
+}
+Execution
+-------------
+	When an error is encountered in the 'try' block, the program flow is transferred to the immediate 'catch' block. The error generated in the try block is recorded in the object specified in the catch block. After the execution of the catch block, the program proceeds further after the catch block, hence no chance of 'Abnormal Program Termination'.
+	Eg : TryCatch1.java
+
+Customizing the error message
+----------------------------------------
+	Another added advantage of exception handling is that you can customize the error messages according to a user's need.
+
+Exception class
+--------------------
+	'Exception' is a pre-defined class available in the package 'java.lang'. Exception is a class which can record any kind of error generated in the program.
+Method
+----------
+1) String getMessage();
+ Returns just the error message.
+
+
+Java's built-in exception classes
+----------------------------------------
+	Java provides a host of built-in exception classes, all of which are sub-classes of  'Exception'. Each and every class handles only a particular type of exception generated in the program. The following are the list of exception classes available.
+1) ArithmeticException
+2) ArrayIndexOutOfBoundsException
+3) NumberFormatException
+4) InterruptedException
+5) IOException
+6) ServletException
+7) SQLException
+8) RemoteException
+9) SocketException
+10) MalformedURLException etc.
+
+II. Multiple Catch Blocks
+--------------------------------
+	A try block can be accompanied by any number of 'catch' blocks, with each catch block handling a particular type of exception.
+Syntax
+---------
+try{
+	. . .
+	Block of code
+	. . .
+}
+catch(exception_class ob)
+{
+	. . .
+}
+catch(exception_class ob)
+{
+	. . .
+}
+. . .
+Execution
+-------------
+	When an error is generated in the try block, the program flow is transferred to the first catch block. The error generated in the try block and the exception_class specified in the catch block are verified. If the specified class can record the error, the catch block is executed and the program flow is transferrred to the statement declared after the last catch. If the catch block cannot record the error, the next catch is verified and likewise.
+
+
+III. Nested try
+------------------
+	A nested try is nothing but a try block inside another try block.
+Syntax
+---------
+try{
+	. . .
+	try{
+		. . .
+	}
+	catch(exception_class ex){
+		. . .
+	}
+}
+catch(exception_class ex){
+	. . .
+}
+
+
+finally block:
+=========
+finally is a block that executes even an error occurred or error may not occur.  Any part of code which want to execute even error occur, write the code in the finally block.
+sytax:
+=====
+try
+{
+...
+}finally
+{
+.....
+}
+(or)
+try
+{
+.....
+}
+catch(Exception e)
+{
+.....
+}
+finally
+{
+......
+}
+
+
+
+throw:
+=====
+Throw is a keyword that allows us to throws the object of either the user defined exception class (or) the object of predefined exception class.
+syntax:
+=====
+throw  new  exception_class;
+eg:
+===
+throw  new ArithmeticException();
+throw new InterruptException();
+User define exceptions:
+============
+To create an user define exception class, we have to inherit the user define exception class either from "Exception class" (or) "Throwable class".
+eg:
+===
+class   MyOwnException extends Exception
+{
+}
+pass the message to the constructor of the user define exception class, which itself passes the message to the super class constructor.
+	set the condition to throw the user defined  exception class object and use the try...catch to caught the error thrown by the user define exception class.
+
+throws:
+=====
+Some predefined methods usage in the program by default throws the exception, we can throw these errors by using the "throws" (or) we can catch by using try....catch.
+syntax:
+====
+throws Exception_class_name
+
+
+
+
+
+
+8/10
+------
+		INTERFACES
+		-------------------
+	Interfaces are similar to classes. They contain only methods without any body. They are a partial substitute for MULTIPLE INHERITANCE. Interfaces are created in the following format.
+Syntax
+---------
+interface  interface_name
+{
+return_type method1([args]);
+return_type method2([args]);
+ 	. . .
+}
+Eg :
+interface MyIntf
+{
+void sayHello();
+}
+	Once you create an interface, the body of the methods in the interface can be developed inside a class. This is done in the following format.
+Syntax
+---------
+class class_name implements interface_name{
+	. . .
+	Body of the methods
+	. . .
+}
+implements is the keyword that gets the methods of interface into the class.
+
+Eg :
+	pro73.java
+Points to remember
+--------------------------
+1) Once an interface has been implemented, you must design the body of all the methods inside the class.
+	pro74.java
+
+Note : If we define some of the methods of the interface inside the implemented class, then at compile time it shows the error message -not abstract class.
+
+2) A class can contain its own methods besides the methods of the interface.
+	pro75.java
+
+3) A class can implement any number of interfaces.
+syntax:
+=====
+class  class_name  implements  interface1,interface2,.......
+{
+............
+}
+note:
+====
+Implementing more than one interface into the class is known as partial substitution for multiple inheritance.
+
+	pro76.java
+
+4) An interface can be implemented by any number of classes.
+	pro77.java	
+
+5)We can inherit one interface into another interface by using "extends" keyword.
+syntax:
+=====
+interface  second extends first
+{
+............
+}
+6)We can extends a class and implement any number of interfaces into another class
+syntax:
+=====
+class  sub_class extends super_class implements inf1,inf2,..
+{
+...........
+}
+
+
+
+
+Example for Multiple Inheritance
+-------------------------------------------
+	Eg : Intf7.java (Fig. 1)
+
+	MULTI-THREADING
+	------------------------------
+	Basically all of us know multi-tasking. There are two types of multi-tasking.
+1) Process based multi-tasking.
+2) Thread based multi-tasking.
+	A process based multi-tasking is one, where two or more programs execute simultaneously. 
+For eg. working out with notepad and paint brush.
+       On the other hand a thread based multi-tasking is one where the same program performs more than one task at the same time. 
+For eg. An Ms-Word document can manage the printing of a document as you are formatting text in another document.
+	Multi-threading is a specialized form of thread-based multi-tasking. In a multi-threaded program, two or more tasks can be performed at the same time. (ie) two or more parts of the same program concurrently  in execution.
+Thread
+---------
+	A thread can be defined as a process, a task, a path to an execution or a block of code. 
+
+Why multi-threading ?
+------------------------------
+	Java is designed for a networked environment. In a networked environment, the idle time of the CPU is the most. By the time the remote system is located, the document is located, transmitted over the network etc. takes some time. To make the maximum usage of the CPU idle time, Java gives you the provision to design multi-threaded programs.
+
+States of a thread
+-----------------------
+A thread exists in several states.
+i)A newborn thread
+ii)newborn thread in thread queue, which is in the runnable state
+iii) A thread can be running.
+iv) A running thread can be suspended.
+v) A suspended thread can be resumed.
+vi) A thread can be stopped. Once stopped it cannot be resumed.
+
+The Main thread
+----------------------
+The main thread is important for two reasons.
+1) It is thread from where the program execution begins and terminates.
+2) Child threads are invoked from inside the main thread.
+
+	In order to perform threading in Java, we have a built-in class named the "Thread" class and a built-in interface named the "Runnable" interface. These are available in the package "java.lang".
+
+Thread class
+-----------------
+	Allows you to create self executing blocks of codes. This class is used to create 'Thread' objects.
+Constructors
+-----------------
+i)Thread()
+ii) Thread(String threadName);
+iii) Thread(Runnable ob);
+Methods
+-----------
+i) void setName(String name);
+ Sets the name of the thread.
+ii) String getName();
+ Returns the name of the thread.
+iii) void setPriority(int priority);
+ Sets the priority level of the thread. 'priority' takes one of the following values ...
+MAX_PRIORITY	(10), 
+NORM_PRIORITY	(5), 
+MIN_PRIORITY	(1)
+iv) int getPriority();
+ Returns the priority level of the thread.
+v) static Thread currentThread();
+ Creates a 'Thread' object for the block of code in which it has been called.
+vi) static void sleep(long milliseconds) throws InterruptedException;
+ Suspends the execution of the thread for the specified amount of milliseconds.
+vii) void start();
+ Starts the execution of the thread.
+
+Runnable interface
+-------------------------
+Provides the method
+	public void run();
+This method constitutes the code for the child thread. It executes concurrently to the main thread.
+
+Designing Multi-threaded programs
+-----------------------------------------------
+In order to design multi-threaded programs, Java provides us two different ways.
+1) Implementing the 'Runnable' interface.
+2) Extending the 'Thread' class.
+
+I. IMPLEMENTING THE RUNNABLE INTERFACE
+--------------------------------------------------------------------
+1) Create a class which implements the 'Runnable' interface.
+2) Design the body of the method 'run()' inside the class.
+3) Create an object for the above class.
+4) Create a 'Thread' object for the above object using the third constructor of the 'Thread' class.
+5) Call the 'start()' of the 'Thread' object. The start() will give a call to the run().
+
+II. EXTENDING THE Thread class
+-----------------------------------------------
+1) Create a class which extends 'Thread' class.
+2) Design the body of the method 'run()'.
+3)Create the object for the class, that creates the thread object implicitly.
+4) Call the start() of the 'Thread' class. The start() gives a call to the run().
+
+thread class some more methods:
+======================
+7)boolean 	isAlive()
+Tests if this thread is alive
+8)void  join()
+Waits for this thread to die.
+9)void  join(long millis)
+Waits at most millis milliseconds
+10)void  suspend()
+suspends the specified thread process
+11)void resume()
+resumes the suspended thread 
+12)void  stop()
+stops the thread process(kills)
+
+Object class methods:
+==============
+Object class is a super class for all the other class.
+Methods:
+=======
+i)void  wait()
+Causes the current thread to wait until another thread invokes the notify() method or the notifyAll() method for this object.
+ii)void  notify()
+Wakes up a single thread that is waiting on this object's monitor.
+iii)void  notifyAll()
+Wakes up all threads that are waiting on this object's monitor.
+
+
+Synchronization:
+===============
+In threading, if number of threads are trying to act on same resource, then it may cause some ambiguity. For example if one thread trying to print the data from a file, at the same time another thread trying to update the data in the same file.  This may cause some strange results.
+	To avoid competing of threads for the same resource, java gives the mechanism of Synchronization.
+syntax:
+=====
+synchronized return_type method_name( args)
+{
+.............
+}
+(or)
+synchronization block
+================
+synchronized(object of the resource)
+{
+........
+}	
+By using synchronization java creates a monitor on the thread(lock) and hands it over to the first thread in thread queue.  Remaining threads must be wait until the first thread complets its task. Then after completing the task of the first thread, first thread hands over the monitor to next thread in the thread queue.
+
+
+		STREAMS
+		---------------
+	A stream can be defined as an object through which you can read and write information. You have different destinations such as files, arrays, standard input / output and remote systems. All stream oriented classes are bundled in a package called "java.io".
+
+
+
+
+
+
+
+
+		java.io
+		---------
+I. File class
+---------------
+	Gives elaborate information regarding files in a directory. The information commonly includes the name of the file, the directory path, the size of the file, the permissions of the file etc.
+Constructors
+-----------------
+i) File(String filename);
+ii) File(String dirName, String filename);
+iii) File(File ob);
+Methods
+-----------
+i) String getName();
+ Returns the name of the file.
+ii) String getAbsolutePath();
+ Returns the file path.
+iii) boolean exists();
+ Checks for the existence of a file.
+iv) boolean isFile();
+ Checks whether the specified name is a file name or not.
+v) boolean isDirectory();
+ Checks whether the specified name is a directory or not.
+vi) boolean canRead();
+ Checks whether you can read from the file or not.
+vii) boolean canWrite();
+ Checks whether you can write to the file or not.
+viii) long length();
+ Returns the size of the file.
+eg:
+	FileIO1.java
+
+
+ix) boolean renameTo(File f);
+ Renames a file.
+eg:
+	FileIO2.java
+x) boolean delete();
+ Removes a file.
+	FileIO3.java
+xi)boolean mkdir(); 
+Creates the directory named by this abstract pathname. 
+xiI) String[ ] list();
+ Returns all the filenames available in a specific directory,
+as an array of 'String' objects.
+	FileIO4.java
+xiii) File[ ] listFiles();
+ Returns all the files available in a specific directory as an array of 'File' objects.
+	FileIO5.java
+xiv)static File[]  listRoots()
+List the available filesystem roots.
+	Eg : FileClassMeth.java
+Write a Java program to rename a specified file, the condition being the source file name should exist and the target file name should not exist.
+	Eg : FileRename.java
+Write a Java program to remove a specified file, the condition being the specified file should exist. 
+	Eg : FileDelete.java
+Write a Java program to list out all the files available in a specific directory.
+	Eg : FileList.java
+Write a Java program to list out all the files along with their sizes in a specific directory.
+	Eg : FileList1.java
+12/11
+-------
+	Streams are categorized into the following two groups
+	1) Byte Streams
+	2) Character Streams
+		BYTE STREAMS
+		------------------------
+	Byte streams allow us to read and write information purely in the form of bytes. It is ruled by two topmost ABSTRACT CLASSES namely - "InputStream" and "OutputStream".
+		Fig. 1
+Abstract Class
+--------------------
+	An abstract class is a mixture of classes and interfaces (i.e.) some methods will have a body and some methods will not have a body. You cannot create objects for abstract classes. Other classes create objects for abstract classes.
+	An abstract class is created using the reserved keyword called "abstract". The methods which do not contain a body are again declared as "abstract". The class which extends this abstract class will define the body of the abstract method.
+	Eg : AbstractClass.java
+
+InputStream class
+------------------------
+	Allows us to read information. All the methods of this class by default raise an 'IOException', which must be caught either by using 'try ... catch' block of by using 'throws'.
+Methods
+-----------
+i) void close();
+ Closes the stream.
+ii) int available();
+ Returns the number of bytes currently available for reading.
+iii) int read();
+ Attempts to read the 'int' representation of the next available byte of input. At the end of the file returns -1.
+iv) int read(byte buffer[ ]);
+ Attempts to read upto 'buffer.length' bytes from the invoking stream into the byte array 'buffer'.
+v) int read(byte buffer[ ], int offset, int numbytes);
+ Attempts to read upto 'numbytes' bytes from the invoking stream into the byte array 'buffer' starting at 'offset'.
+
+OutputStream class
+--------------------------
+ Allows you to write information. All the methods of this class by default raise an 'IOException', which must be caught either by using try ... catch block or by using 'throws'.
+Methods
+------------
+i) void close();
+ Closes the stream.
+ii) void write(int n);
+ Writes the 'int' representation into the invoking stream.
+iii) void write(byte buffer[ ]);
+ Writes upto 'buffer.length' bytes into the invoking stream.
+iv) void write(byte buffer[ ], int offset, int numbytes);
+ Writes upto 'numbytes' bytes from the byte array 'buffer' starting at 'offset' into the invoking stream.
+
+22/9
+------
+throws clause
+------------------
+	In Java there are plenty of built-in methods, whose usage in your programs will generate errors at compile-time itself. To handle such kind of errors, we have a second technique of exception handling (i.e.) the usage of 'throws' clause. The 'throws' clause is used with the methods of a class, in the following format.
+Syntax
+---------
+return_type method_name(arguments) throws exception_list{
+	. . .
+	Body of the method
+	. . .
+}
+		Working with Files
+		------------------------
+I. FileInputStream class
+-------------------------------
+	Creates an 'InputStream' object using which you can read contents from a file.
+Constructors
+-----------------
+i) FileInputStream(String filename);
+ii) FileInputStream(File f);
+Program
+------------
+(Examples for the I form of read()) .
+Write a java program to read the contents of a file and print the contents.
+
+Write a java program to print the contents of a file in upper case.
+	Eg : FilePrintContentsUpper.java
+Write a java program to count the number of upper case alphabets, lower case alphabets, digits, spaces and vowels in a specified file.
+	Eg : FileCount.java
+(Example for the II form of read()).
+	Eg : FilePrintContents1.java
+		Fig. 2
+	FilePrintContents2.java
+23/10
+-------
+II. FileOutputStream class
+----------------------------------
+	Creates an 'OutputStream' object for the specified file, through which you can write contents to a file.
+Constructors
+-----------------
+i) FileOutputStream(String filename);
+ii) FileOutputStream(File ob);
+Program
+------------
+Write a Java program to copy the contents of one file into another.
+	Eg : FileCopy.java (write() - I form) Fig.1 
+	        FileCopy1.java (write() - II form)
+	        FileCopy2.java (write() - II form)
+	        FileCopy3.java (write() - III form)
+
+		Working with Arrays
+		---------------------------
+I. ByteArrayInputStream class
+----------------------------------------
+	Creates an 'InputStream' object for a byte array. 
+Constructor
+----------------
+ByteArrayInputStream(byte buffer[ ]);
+	Eg : ByteArrayRead.java (Fig -3)
+
+II. ByteArrayOutputStream class
+-------------------------------------------
+	Allows you to create an object which can store contents. The contents can later be written to a file or an array.
+Constructor
+----------------
+ByteArrayOutputStream();
+Methods
+------------
+i) byte[ ] toByteArray();
+ Writes the contents of the object to a byte array.
+ii) void writeTo(FileOutputStream ob);
+ Writes the contents of the object to a file.
+	Eg : ByteArrayWrite.java (Fig - 4)
+
+		Working with std. input/output
+		----------------------------------------
+I. DataInputStream class
+--------------------------------
+Allows you to create an object for the standard input device.
+Constructor
+----------------
+DataInputStream(InputStream obj);
+Method
+----------
+String readLine();
+ Reads a line of text.
+Eg :
+DataInputStream cin=new DataInputStream(System.in);
+Note
+-------
+	This class is a deprecated API (left out). The usage of this class will lead to warnings, which can be ignored by the programmer and the program can still be run.
+
+PrintStream class
+-----------------------
+	Creates an object for the standard output device.
+Constructor
+-----------------
+PrintStream(OutputStream ob);
+Methods
+-----------
+i) void print(Object o);
+ii) void println(Object o);
+	Eg : SumNumbers.java
+
+
+CHARACTER STREAMS
+-----------------------------------
+	Character streams allow us to read and write information purely in the form of characters. They are ruled by two topmost abstract classes namely - "Reader" and "Writer".
+
+Reader class
+----------------
+	Allows you to read information. All the methods of this class by default raise an IOException, which must be caught either by using try ... catch block or by using throws.
+Methods
+-----------
+i) void close();
+ Closes the stream.
+ii) int read();
+ Attempts to read the 'int' representation of the next available character of input. At the end of the file returns -1. 
+iii) int read(char buffer[ ]);
+ Attempts to read upto 'buffer.length' characters from the invoking stream into the character array 'buffer'.
+iv) int read(char buffer[ ], int offset, int numchars);
+ Attempts to read upto 'numchars' characters from the invoking stream into the character array 'buffer' starting at 'offset'.
+
+Writer class
+----------------
+	Allows you to write information. All the methods of this class by default raise an IOException, which must be caught either by using try ... catch block or by using throws.
+Methods
+------------
+i) void close();
+ Closes the stream.
+ii) void write(int n);
+ Writes the 'int' representation into the invoking stream.
+iii) void write(char buffer[ ]);
+ Writes the contents of the character array 'buffer' into the invoking stream.
+iv) void write(char buffer[ ], int offset, int numchars);
+ Writes 'numchars' characters from the character array 'buffer' starting at 'offset' into the invoking stream.
+v) void write(String s);
+ Writes the contents of the 'String' object into the invoking stream.
+vi) void write(String s, int start, int no of char);
+ Writes a range of contents from the string object into the invoking stream.
+		Working with Files
+		-------------------------
+I. FileReader class
+------------------------
+	Creates a 'Reader' object for the specified file.
+Constructors
+-----------------
+i) FileReader(String filename);
+ii) FileReader(File f);
+Program
+------------
+ Write a Java program to print the contents of a file.
+
+	FilePrint1.java (read() - II form).
+	FilePrint2.java (read() - III form).
+
+II. FileWriter class
+------------------------
+	Creates a 'Writer' object for the specified file.
+Constructors
+-----------------
+i) FileWriter(String filename);
+ii) FileWriter(File f);
+Program
+------------
+ Write a Java program to copy the contents of one file into another.
+
+
+
+Eg :	FileWrite.java (write() - I form).
+	FileWrite1.java (write() - II form).
+	FileWrite2.java (write() - II form). (Copy file)
+	FileWrite3.java (write() - III form).
+	FileWrite4.java (write() - IV form).
+	FileWrite5.java (write() - V form).
+
+		Working with arrays
+		---------------------------
+I. CharArrayReader class
+----------------------------------
+Creates a 'Reader' object for the specified character array.
+Constructor
+----------------
+CharArrayReader(char buffer[ ]);
+
+II. CharArrayWriter class
+----------------------------------
+	Creates an object which can buffer contents. The contents can later be written to an array or a file.
+Constructor
+----------------
+CharArrayWriter();
+Methods
+-----------
+i) char[ ] toCharArray();
+ Writes the contents of the buffer to a character array.
+ii) void writeTo(FileWriter ob);
+ Writes the contents of the buffer to the file.
+
+
+		Working with std. input/output
+		----------------------------------------
+I. BufferedReader class
+------------------------------
+	Improves performance by buffering input.
+Constructor
+----------------
+BufferedReader(InputStreamReader ob);
+Method
+----------
+String readLine();
+	Reads a line of text.
+
+II. InputStreamReader class
+-------------------------------------
+	Converts incoming bytes to characters.
+Constructor
+-----------------
+InputStreamReader(InputStream ob);
+Eg :
+i) InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+ii) BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+
+III. PrintWriter class
+---------------------------
+	Improves performance by buffering output.
+Constructor
+----------------
+PrintWriter(OutputStreamWriter ob, boolean flush);
+	The argument 'flush' should always be set to 'true', to redirect the contents of the buffer to the destination device.
+Methods
+------------
+i) void print(Object o);
+ii) void println(Object o);
+
+OutputStreamWriter class
+----------------------------------
+	Converts outgoing characters into bytes.
+Constructor
+----------------
+OutputStreamWriter(OutputStream ob);
+Eg :
+i) OutputStreamWriter osw=new OutputStreamWriter(System.out);
+PrintWriter pw=new PrintWriter(osw,true);
+ii) PrintWriter pw=new PrintWriter(new OutputStreamWriter(System.out),true);
+
+Program
+------------
+	Read student's no, name and marks in 3 subjects. Compute the total ,average and grade of the student. 
+
+
+
+
+1) The student should obtain a min. of 35 marks in all the 3 subjects.
+2) Grades are allotted as folows.
+i) if avg>=75, grade is "Distinction".
+ii) if avg is between 60 & 75, grade is "First Class".
+iii) if avg is between 45 & 60, grade is "Second Class".
+iv) if avg is between 35 & 45, grade is "Third Class".
+3) In all other cases grade is "Failed".
+	Eg : StudentResults.java
+Exercise
+-----------
+	Read the employee's identification number, name, grade (1/2/3) and basic salary. Compute the gross and the net salary of the employee using the following conditions.
+GRADE	DA	HRA	TA	PF	IT
+----------------------------------------------------------------------------
+1	10%	8%	6%	3%	2%
+2	8%	6%	4%	2%	1%
+3	6%	4%	2%	1%	NIL
+		on basic salary.
+Gross Salary = B.S. + da+hra+ta;
+Net Salary=Gross Salary-(pf+it);
+
+25/10
+-------
+		AWT
+		-------
+	AWT is expanded as Abstract Windowing Toolkit. The AWT package helps you build GUI applications in Java. Every GUI component such as windows, buttons, checkboxes etc. are available in the form of pre-defined classes. All these classes are bundled in the package "java.awt".
+		java.awt
+		-----------
+I. Frame class
+------------------
+	Encapsulates a frame window.
+Constructors
+-----------------
+i) Frame();
+ii) Frame(String title);
+Methods
+-----------
+i) void setTitle(String title);
+  Sets a title bar text for the frame window.
+ii) void setSize(int width, int height);
+  Sets the width and the height of the frame window.
+iii) void setVisible(boolean visible);
+ Hides or displays the frame window.
+iv) void show();
+ Displays a window.
+v) void paint(Graphics ob);
+ Allows you to perform drawings in the window.
+vi) void repaint();
+ Calls the paint().
+
+vii) void add(Component c);
+ Adds a component to the frame window.
+viii) void requestFocus();
+ Sets the focus on the frame window.
+ix) void setMenuBar(MenuBar ob);
+ Sets the menu bar to the frame window.
+x) void setLayout(LayoutManager ob);
+ Sets the specified layout for the frame window.
+xi) void setFont(Font ob);
+ Sets the specified font for the frame window.
+xii) void setCursor(Cursor ob);
+ Sets the specified cursor to the frame window.
+xiii) void setBackground(Color ob);
+ Sets the background color of the frame window.
+xiv)void setExtendedState(int state)
+  sets the state of the frame window
+states are MAXIMIZED_BOTH, MAXIMIZED_VERTICALLY, MAXIMIZED_HORIZONTALLY
+	
+Program :
+-------------
+Creation of a window.
+	Eg : CreateWindow.java
+	CreateWindow1.java
+
+Graphics class
+------------------
+	Allows you to perform drawings in a frame window.
+Methods
+-----------
+i) void drawLine(int x1,int y1,int x2,int y2);
+ Draws a line.
+ii) void drawRect(int x, int y, int width, int height);
+ Draws a rectangle.
+iii) void fillRect(int x, int y, int width, int height);
+ Draws and fills a rectangle.
+iv) void drawRoundRect(int x, int y, int width, int height, int arcwidth, int archeight);
+ Draws a rounded rectangle.
+v) void fillRoundRect(int x, int y, int width, int height, int arcwidth, int archeight);
+ Draws and fills a rectangle.
+vi) void draw3DRect(int x, int y, int width, int height, boolean raised);
+  Draws a 3-D rectangle.
+vii) void fill3DRect(int x, int y, int width, int height, boolean raised);
+ Draws and fills a 3-D rectangle.
+viii) void drawOval(int x, int y, int width, int height);
+ Draws a circle or an ellipse.
+ix) void fillOval(int x, int y, int width, int height);
+ Draws and fills a circle or an ellipse.
+x) void drawArc(int x, int y, int width, int height, int startangle, int totalangle);
+  Draws an arc.
+xi) void fillArc(int x, int y, int width, int height, int startangle, int totalangle);
+  Draws and fills an arc.
+xii) void drawImage(Image image, int x, int y, ImageConsumer ob);
+ Draws an image at the specified co-ordinate.
+xiii) void drawString(String msg, int x, int y);
+ Draws a string at the specified co-ordinate.
+xiv) void setColor(Color ob);
+ Sets the current drawing color.
+
+26/10
+-------
+Eg : GenerateGraphics.java
+
+Color class
+---------------
+	Allows you to create 'Color' objects.
+Constructor
+----------------
+Color(int red,int green,int blue);
+	where red, green and blue take a value between 0 and 255.
+Eg :
+	Color c1=new Color(255,0,0);
+Constants
+-------------
+black, blue, cyan, darkGray, gray, green, lightGray, magenta, orange, pink, red, white and yellow
+usage :
+====
+	Color.red
+
+Cursor class 
+----------------
+	Allows you to create cursor objects.
+Constructor
+----------------
+	Cursor(int type);
+where 'type' takes one of the following constants.
+Constants
+-------------
+DEFAULT_CURSOR, CROSSHAIR_CURSOR, TEXT_CURSOR, WAIT_CURSOR, HAND_CURSOR, MOVE_CURSOR, N_RESIZE_CURSOR, S_RESIZE_CURSOR, E_RESIZE_CURSOR, W_RESIZE_CURSOR, NE_RESIZE_CURSOR, NW_RESIZE_CURSOR, SE_RESIZE_CURSOR, SW_RESIZE_CURSOR.
+
+Font class 
+--------------------------
+	Allows you to create 'Font' objects.
+Constructor
+----------------
+Font(String name, int style, int size);
+Arguments
+--------------
+a) name - Specifies the font name.
+b) style - Specifies the font style. It takes one of the following constants
+BOLD, ITALIC and PLAIN.
+c) size - Specifies the font size.
+Eg :
+	CustomizeFont.java
+
+		AWT Components
+		------------------------
+	Java provides a rich set of AWT components, which allow a user to interact with a GUI based application. The following are the AWT components available.
+I. Label class
+-----------------
+	Allows you to create 'Label' objects.
+Constructors
+-----------------
+i) Label();
+ii) Label(String s);
+	Creates a label object with the specified string.
+Methods
+------------
+i) void setText(String s);
+ Sets the specified text on the label. Useful for the first constructor.
+ii) String getText();
+ Returns the text from the label.
+Eg :	CreateLabels.java
+
+II. Button class
+-------------------
+	Allows you to create 'Button' objects.
+Constructors
+-----------------
+i) Button();
+ Creates a button object without a label on it.
+ii) Button(String s);
+ Creates a button object with the specified string s on it.
+Methods
+------------
+i) void setLabel(String s);
+ Sets the label on the button. Useful for the first constructor.
+ii) String getLabel();
+ Returns the label from the button.
+
+
+III. Checkbox class
+-------------------------
+	Allows you to create checkbox objects.
+Constructors
+-----------------
+i) Checkbox();
+ Creates a checkbox without a label on it.
+ii) Checkbox(String s);
+ Creates a checkbox with the string s on it.
+iii) Checkbox(String s, boolean state);
+ Creates a checkbox with the string 's' and the initial state set to 'state'.
+iv) Checkbox(String s, boolean state, CheckboxGroup grp);
+v) Checkbox(String s, CheckboxGroup grp, boolean state);
+ Creates radio buttons.
+Methods
+-----------
+i) void setLabel(String s);
+ Sets the specified label on the checkbox.
+ii) String getLabel();
+ Returns the label from the checkbox.
+(*) iii) boolean getState();
+ Returns the state of the checkbox.
+iv) void setState(boolean state);
+ Sets the state of the checkbox.
+
+
+IV. Radio buttons
+-----------------------
+	As such there is no separate class to create radio buttons. They are done using the 4th and the 5th constructors of the Checkbox class.
+	Radio buttons must be configured into a group, such that from the group you can select only one. Groups can be created using the class called "CheckboxGroup", which provides just the default constructor.
+	CheckboxGroup();
+
+
+V. Choice class
+-------------------
+    Presents a drop-down list of items from which a user can select one.
+Constructor
+-----------------
+	Choice();
+Methods
+-----------
+i) void addItem(String s);
+ii) void add(String s);
+	Adds an item to the choice object.
+iii) String getSelectedItem();
+	Returns the currently selected item.
+iv) int getSelectedIndex();
+	Returns the index of the currently selected item.
+v) int getItemCount();
+	Returns the total number of items.
+vi) void select(int index);
+vii) void select(String s);
+	Selects a default item.
+
+
+VI. List class
+-----------------
+	Creates a scrolling list of items.
+Constructors
+-----------------
+i) List();
+ii) List(int rows);
+iii) List(int rows, boolean multiple);
+Methods
+-----------
+Same as 'Choice' class (ii) to (vii).
+viii)String[]  getSelectedItems()
+Gets the selected items on this scrolling list.
+ix)int[]  getSelectedIndexes()
+Gets the selected indexes on the list.
+
+VII. TextField class
+--------------------------
+	Creates a single line edit control.
+Constructors
+------------------
+i) TextField();
+ii) TextField(String s);
+iii) TextField(int cols);
+iv) TextField(String s, int cols);
+Methods
+------------
+* i) void setText(String s);
+ Sets the string 's' into the textfield.
+* ii) String getText();
+ Returns the string from the textfield.
+iii) void setEditable(boolean editable);
+ Sets the editable state of the textfield.
+iv) void setEchoChar(char x);
+ Sets the echo character.
+
+
+VIII. TextArea class
+---------------------------
+	Creates multi-line edit control.
+Constructors
+-----------------
+i) TextArea();
+ii) TextArea(String s);
+iii) TextArea(int rows, int cols);
+iv) TextArea(String s, int rows, int cols);
+Methods
+-----------
+i) void setText(String s);
+ii) String getText();
+iii) void setEditable(boolean editable);
+iv) void append(String s);
+	Appends the contents of 's' to the textarea.
+
+
+29/10
+-------
+		EVENT HANDLING
+		----------------------------
+
+	The event handling mechanism in Java is called as DELEGATION EVENT MODEL (DEM). In a DEM, we have two major entities namely -
+	1) Event Sources
+	2) Event Listeners
+Event Sources
+------------------
+	Any component capable of generating an event is referred as an 'Event Source'. All the AWT components are capable of generating events, hence all of them come under event sources.
+Event Listeners
+--------------------
+	Event listeners are nothing but a set of interfaces which must be implemented when the corresponding event occurs.
+EVENT
+----------
+	In general an event is defined as a block of code which is executed when some sort of action is performed on a component. 'Action' in the sense clicking of a mouse, double clicking a mouse, pressing a key, releasing a key etc.
+	In Java every event is represented with a pre-defined class. These classes are designed depending on two factors -
+"Awt Component"+"Action you perform on the component".
+For eg :
+The 'ActionEvent class' represents a button press or a menu item clicked. 
+	Every event class has its corresponding listener interface. Whenever you want to perform the corresponding event in the program, the corresponding listener interface must be implemented and the body of the methods must be designed.
+
+Registering a component
+--------------------------------
+	Whenever you want to perform an event on a particular component, you must register the component with the corresponding listener interface. For eg. If you want to perform 'ActionEvent' on a button, you must register the button with the 'ActionListener' interface. This is done using the following method.
+     void addTYPEListener(TypeListener ob);
+Eg :
+i) Button b1=new Button("Red");
+b1.addActionListener(this);
+ii) List l=new List();
+l.addItemListener(this);
+		java.awt.event
+		------------------
+I. ActionEvent class
+--------------------------
+	An 'ActionEvent' is generated when a button is pressed or a menu item is clicked.
+Methods
+-----------
+i) String getActionCommand();
+ Returns the text out of the component.
+ii) Object getSource();
+ Returns the object which generated the event.
+
+ActionListener interface
+-------------------------------
+Provides the method
+    void actionPerformed(ActionEvent ob);
+
+
+I. Validating buttons
+--------------------------
+	ValidateButtons.java (Fig. 1)
+II. Validating Textfields
+-------------------------------
+	ValidateTextfield.java
+30/10
+-------
+III. Validating checkboxes
+----------------------------------
+
+IV. Validating radio buttons
+------------------------------------
+
+V. Validating choice
+--------------------------
+	ValidateChoice.java (Fig.2)
+VI. Validating lists
+------------------------
+	ValidateList.java, ValidateList1.java (Fig. 3)
+
+Eg : Double clicking on a list item.
+	ValidateList2.java
+
+Creating menus
+---------------------
+	The AWT package too supports the creation of menus. Three classes are used to create menus - MenuBar, Menu and MenuItem.
+1) MenuBar class
+----------------------
+Allows you to create a 'MenuBar' object.
+Constructor
+----------------
+	MenuBar();
+Method
+----------
+Menu add(Menu object);
+	Adds a 'Menu' object to the menu-bar.
+2) Menu class
+------------------
+Allows you to create a 'Menu' object.
+Constructor
+----------------
+	Menu(String menuname);
+Method
+-----------
+MenuItem add(MenuItem ob);
+	Adds a 'MenuItem' object to the 'Menu' object.
+3) MenuItem class
+------------------------
+	Allows you to create a 'MenuItem' object.
+Constructor
+----------------
+	MenuItem(String itemname);
+Eg :
+
+
+
+II. ItemEvent class
+------------------------
+	An 'ItemEvent' is generated when a checkbox is clicked or a list item is clicked.
+
+ItemListener interface
+-----------------------------
+Provides the method
+	void itemStateChanged(ItemEvent ob);
+Eg : Checkbox / Radio button click
+ValidateRadiobutton1.java, ValidateCheckbox1.java
+   Choice / List click
+ValidateChoice1.java, ValidateList3.java
+
+
+III. FocusEvent class
+---------------------------
+	A 'FocusEvent' is generated when a component gains or loses focus.
+
+FocusListener interface
+------------------------------
+Provides the methods
+	void focusLost(FocusEvent ob);
+	void focusGained(FocusEvent ob);
+
+
+IV. KeyEvent class
+-------------------------
+	There are three types of key events namely - KEY_PRESSED, KEY_RELEASED and KEY_TYPED.
+public final static int VK_0=48;
+public final static int VK_1=49
+Constants
+-------------
+	This class defines several constants which represent the keys from the keyboard. These constants start with the symbol VK_ (Virtual Key). The following are the constants available.
+VK_0 to VK_9, VK_A to VK_Z, VK_F1 to VK_F12, VK_ENTER, VK_ESCAPE, VK_CONTROL, VK_SHIFT, VK_ALT, VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_PAGE_UP, VK_PAGE_DOWN etc.
+Methods
+-----------
+i) int getKeyCode();
+ Returns the virtual key code.
+ii) char getKeyChar();
+ Returns the printable character that was pressed from the keyboard.
+
+KeyListener interface
+----------------------------
+Provides the methods
+	void keyPressed(KeyEvent ob);
+	void keyReleased(KeyEvent ob);
+	void keyTyped(KeyEvent ob);
+
+
+
+V. MouseEvent class
+---------------------------
+	There are 7 types of mouse events namely - MOUSE_ENTERED, MOUSE_EXITED, MOUSE_PRESSED, MOUSE_RELEASED, MOUSE_CLICKED, MOUSE_MOVED, MOUSE_DRAGGED.
+Methods
+------------
+i) int getX();
+ii) int getY();
+  Returns the X and the Y co-ordinate where the mouse was pressed.
+
+MouseListener interface
+--------------------------------
+Provides the methods
+	void mouseEntered(MouseEvent ob);
+	void mouseExited(MouseEvent ob);
+	void mouseClicked(MouseEvent ob);
+	void mousePressed(MouseEvent ob);
+	void mouseReleased(MouseEvent ob);
+MouseMotionListener interface
+------------------------------------------
+Provides the methods
+	void mouseMoved(MouseEvent ob);
+	void mouseDragged(MouseEvent ob);
+
+Eg : ValidateMouseevents.java
+
+VI. WindowEvent class
+-----------------------------
+	There are 7 types of window events namely - WINDOW_ACTIVATED, WINDOW_CLOSED, WINDOW_CLOSING, WINDOW_DEACTIVATED, WINDOW_DEICONIFIED, WINDOW_ICONIFIED, WINDOW_OPENED.
+
+WindowListener interface
+---------------------------------
+Provides the methods
+void windowActivated(WindowEvent ob);
+void windowClosed(WindowEvent ob);
+void windowClosing(WindowEvent ob);
+void windowDeactivated(WindowEvent ob);
+void windowDeiconified(WindowEvent ob);
+void windowIconified(WindowEvent ob);
+void windowOpened(WindowEvent ob);
+
+		ADAPTER CLASSES
+		----------------------------
+	Adapter classes are used only when you want to process some of the events from a listener interface. The following are the adapter classes available.
+Adapter class		Listener interface
+------------------		-----------------------
+FocusAdapter		FocusListener
+KeyAdapter		KeyListener
+MouseAdapter		MouseListener
+MouseMotionAdapter      MouseMotionListener
+WindowAdpater		WindowListener
+Syntax
+---------
+addTYPEListener(new AdapterClass(){
+	...
+	Body of the methods
+	...
+});
+
+
+
+
+		LAYOUT MANAGERS
+		-------------------------------
+	Layout managers are a set of classes which are used to organize components in a particular order in the frame window.
+I. FlowLayout class
+-------------------------
+	The 'FlowLayout' divides the window in terms of rows. Components are arranged row-wise. The filling of the components starts from the middle of the row. Once the row is full, the components are then arranged in the next row and likewise. By default there is a 5 pixel gap between the components.
+Constants
+-------------
+	This class defines 3 constants namely LEFT, CENTER, RIGHT.
+Constructors
+-----------------
+i) FlowLayout();
+ii) FlowLayout(int align);
+iii) FlowLayout(int align, int horz, int vert);
+
+II. BorderLayout class
+-----------------------------
+	The BorderLayout class divides the window into 5 major regions namely north, south, east, west and center. Components can be arranged in these regions.
+Constants
+-------------
+NORTH, SOUTH, EAST, WEST, CENTER, AFTER_LAST_LINE , PAGE_END ,PAGE_START, BEFORE_LINE_BEGINS 
+Constructors
+-----------------
+i) BorderLayout();
+ii) BorderLayout(int horz, int vert);
+Note
+------
+	When you use the 'BorderLayout', the add() of the frame class takes the following format.
+Syntax
+---------
+	void add(Component c, region r);
+
+III. GridLayout class
+---------------------------
+	The GridLayout divides the entire window in terms of rows and columns. It creates cells, in which the components can be placed.
+Constructors
+-----------------
+i) GridLayout(int rows, int cols);
+ii) GridLayout(int rows, int cols, int horz, int vert);
+
+IV)BoxLayout class
+===================
+A layout manager that allows multiple components to be laid out either vertically or horizontally.
+Contants:
+=====
+static int LINE_AXIS 
+-------------------
+Specifies that components should be laid out in the direction of a line of text as determined by the target container's ComponentOrientation property.
+ static int PAGE_AXIS 
+--------------------------
+Specifies that components should be laid out in the direction that lines flow across a page as determined by the target container's ComponentOrientation property.
+ static int X_AXIS 
+-----------------------
+Specifies that components should be laid out left to right.
+ 
+static int Y_AXIS 
+----------------------------
+Specifies that components should be laid out top to bottom. 
+Constructor:
+========
+BoxLayout(Container target, int axis) 
+Creates a layout manager that will lay out components along the given axis.
+
+
+Panel class
+--------------
+	A panel is a window without a title bar and a menu-bar. 
+Usually people place components on a panel and then attach the panel to the frame or the applet. Panels are created using the 'Panel' class which provides the default constructor.
+Constructor
+----------------
+	Panel();
+
+setBounds()
+---------------
+	Places the component at a desired location on the window.
+Syntax
+---------
+setBounds(int x, int y, int width, int height);
+Eg : Bounds.java
+
+Canvas class
+----------------
+	The 'Canvas' class is a window without a title bar and a menu bar. This is exclusively used for generating drawings. It is created using the following constructor.
+Constructor
+----------------
+	Canvas();
+Loading images in Frame Window
+------------------------------------------
+	In order to load images in the window, we use the class 'Toolkit' class.  The first step to be done is to create a 'Toolkit' object using the method 'getDefaultToolkit()'.
+Syntax
+---------
+static Toolkit getDefaultToolkit();
+	Once the 'Toolkit' object is created, we use the method 'getImage()' of the 'Toolkit' class to load the image.
+
+Syntax
+---------
+Image getImage(String image);
+
+	Once the image is loaded in the 'Image' object, you can then draw the image on the window using the method "drawImage()" of the Graphics class.
+Syntax
+---------
+void drawImage(Image image, int x, int y, ImageObserver img);
+	where 'ImageObserver' is nothing but the frame window.
+Loading image in applet:
+======================
+In order to load images in the applet, we have to create image object.
+
+Syntax
+---------
+Image getImage("path of the file",String image);
+eg:
+==
+Image img=getImage(getDocumentBase(),"nice.jpg");
+getDocumentBase():
+==============
+Returns the base directory address of the image.
+
+	Once the image is loaded in the 'Image' object, you can then draw the image on the window using the method "drawImage()" of the Graphics class.
+Syntax
+---------
+void drawImage(Image image, int x, int y, ImageObserver img);
+	where 'ImageObserver' is nothing but the frame window.
+
+	APPLETS
+	-------------
+	Applets are GUI based applications designed to be executed in a Web-Browser (Internet Explorer, Netscape Communicator, HotJava, Mozilla etc.). Applets are created using the class called "Applet", available in the package "java.applet". Majority of the support for applets comes through the package "java.awt". 
+Life-cycle of an applet
+----------------------------
+The life-cycle of an applet consists of four major methods.
+1) init()
+2) start()
+3) stop()
+4) destroy()
+init()
+------
+	The first method to be executed when the applet is subjected to execution is the 'init()'. All kinds of initializations are performed inside this method. Initializations such as object creations, variable initializations etc. 
+start()
+--------
+	The second method to be executed after the init() is the start(). You can build some sort of logic inside the start(). Logic in the sense adding components, registering with listeners etc.
+stop() / destroy()
+---------------------
+	These methods are executed when the applet loses focus or the browser window is shut down. You can relinquish all kinds of resources committed to the applet, such as closing of streams, etc.
+
+Skeleton of an applet
+---------------------------
+import java.applet.*;
+public class class_name extends Applet{
+public void init(){
+...
+}
+public void start(){
+...
+}
+public void stop(){
+...
+}
+public void destroy(){
+...
+}
+}
+
+Executing an applet
+--------------------------
+1) Write the source code and save it with the name of the class and the extension .java.
+2) Compile the source code using the compiler "javac.exe".
+3) Write a HTML page.
+	HTML is expanded as 'HyperText Markup Language'. It is the language of the internet. Used to create and deploy web-pages on the net. Commands in HTML are referred as TAGS. TAGS are specified within angular braces. Every tag has a beginning and an ending specified as <tag> ... </tag>. 
+	HTML gives us a provision to embedd Java applets into HTML pages using the tag <applet> ... </applet>.
+Attributes
+-------------
+i) code - Specifies the .class file name.
+ii) width - Width of the applet.
+iii) height - Height of the applet.
+	A sample HTML page would look like.
+<html>
+<applet code=.class width=xxx height=xxx>
+</applet>
+</html>
+4) Save the above html in a separate file, using the extension .html.
+5) Invoke the browser.
+6) In the address bar, type the path to the html document.
+Eg :
+SampleApplet.java, SampleApplet.html
+
+AppletViewer:
+==========
+We can test the applets by using appletviewer. 
+Syntax:
+======
+appletviewer  program_name.java
+
+
+
+To run the applet in appletviewer, we have to use the following code in comments in the java program.
+/*
+<applet code=byte_code.class width=xxx height=xxx>
+</applet>	
+*/
+Applete inter communication:
+========================
+We can pass the arguments to the applet by using the tag <param>
+Syntax:
+=====
+ <param name=XXX value=XXX>
+To get the parameter value in the applet program,  applet class provides a method called "getParameter()"
+syntax:
+=====
+getParameter(parameter_name);
+
